@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../cdnfiles/bootstrap.min.css">
+    <link rel="stylesheet" href="../cssfile/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/slack.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    
+<!-- create a container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class=" sub col-sm-6 mt-5 p-4 mb-5">
+                <!-- form start -->
+                <form id="myForm">
+                    <h3 class="title text-center mt-4">Account</h3>
+                    <!-- name add tags -->
+                    <div class="input-group mb-4 mt-4">
+                        <span class="input-group-addon"><i class="icon1 bi bi-person-fill "></i></span>
+                        <input class="username form-control" type="text" placeholder="Fullname"  name="name" id="name">
+                    </div>
+                    <!-- username tags -->
+                    <div class="input-group mb-4">
+                        <span class="input-group-addon"><i class="bi bi-envelope-at-fill "></i></span>
+                        <input class="username form-control" type="email" placeholder="User Mail"  name="email" id="email" >
+                    </div>
+                    <!-- password tags -->
+                    <div class="input-group mb-4">
+                        <span class="input-group-addon"><i class="bi bi-key-fill "></i></span>
+                        <input class="username form-control" type="password" placeholder="Password" id="password" >
+                    </div>
+
+                    <!-- date add tags -->
+                    <div class="row mb-4">
+                        <div class="col-sm-6">
+                            <h4 class="title text-center">Date Of Birth</h4>
+                            <div class="row mt-4">
+                                <div class="col-4">
+                                    <select class="form-select" id="daySelect" name="day">
+                                        <option value="DD">DD</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select class="form-select" id="month" name="month">
+                                        <option value="MM">MM</option>
+                                        <option value="2">Jan</option>
+                                        <option value="3">Fed</option>
+                                        <option value="4">Mar</option>
+                                        <option value="5">Apr</option>
+                                        <option value="6">May</option>
+                                        <option value="7">Jun</option>
+                                        <option value="8">Jul</option>
+                                        <option value="9">Aug</option>
+                                        <option value="10">Sep</option>
+                                        <option value="11">Oct</option>
+                                        <option value="12">Nov</option>
+                                        <option value="13">Dec</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select class="form-select"  id="yearSelect" name="year">
+                                        <option value="YYYY">YYYY</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- genders tags -->
+                        <div class="col-sm-6">
+                            <h4 class="title text-center">Gender</h4>
+                            <div class="gender row mt-4 pt-2 pb-2">
+                                <div class=" col-4">
+                                    <label class="form-check-label">Male</label>
+                                    <input class="form-check-input" type="radio" value="male" id="male" name="gender">
+                                </div> 
+                                <div class="col-4">
+                                    <label class="form-check-label" >Female</label>
+                                    <input  class="form-check-input" type="radio" value="female" id="female" name="gender">
+                                </div>
+                                <div class="col-4">
+                                    <label class="form-check-label">Other</label>
+                                    <input class="form-check-input" type="radio" value="other" id="other" name="gender">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- payment details -->
+                    <h4 class="title text-center">Payment Option</h4>
+                    <div class="payment row mt-4 text-center pt-2 pb-2 mb-4">
+                        
+                        <div class="col-3">
+                            <label class="form-check-label" >UPI</label>
+                            <input class="form-check-input" type="checkbox" id="upi" name="payments" value="UPI">
+                        </div>
+                        <div class="col-3">
+                            <label class="form-check-label" >Network Bank</label>
+                            <input class="form-check-input" type="checkbox" id="network" name="payments" value="Network Bank">
+                        </div>
+                        <div class="col-3">
+                            <label  class="form-check-label" >Visa</label>
+                            <input class="form-check-input" type="checkbox" id="visa" name="payments" value="Visa">
+                        </div>
+                        <div class="col-3">
+                            <label class="form-check-label">Paypal</label>
+                            <input  class="form-check-input" type="checkbox" id="paypal" name="payments" value="Paypal">
+                        </div>
+
+                    </div>
+                    <div><button class="btn btn-primary w-100"  type="button" id="submitt">Submit</button></div>
+                    <p class="h6 mt-4 ">* I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</p>
+                    
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+            
+        </div>
+    </div>
+    
+        <!-- The Modal -->
+        <div class="modal fade" id="invalid">
+            <div class="modal-dialog">
+                <div class="modal-content">
+    
+                    <!-- Modal header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">error</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p id="aa" class="text-danger"></p>
+                    </div>
+    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <script src="../cdnfiles/jquery-3.7.1.min.js"></script>
+    <script src="../cdnfiles/bootstrap.bundle.min.js"></script>
+    <script src="../cdnfiles/popper.min.js"></script>
+    <script src="../jsfile/index.js"></script>
+</body>
+</html>

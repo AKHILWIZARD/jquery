@@ -1,0 +1,77 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url('../images/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+i{
+    font-size: 34px;
+    padding: 0.07em;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgb(183, 152, 192);
+}
+i:hover{
+    color: rgb(42, 1, 57);
+}
+
+.username{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 19px;
+    background-color: rgb(183, 152, 192,0.4);
+    
+    
+    
+}
+
+.sub{
+    background-color: rgb(93, 21, 138,0.6);
+    border-radius: 8px;
+    border: 0.1px solid #fff;
+    box-shadow: -1px 3px 15px black;
+    transition: transform 500ms ease-in-out;
+}
+.sub:hover{
+    transform: scale(1.04);
+}
+
+.title{
+    font-size: 27px;
+    font-weight: bolder;
+    color: rgb(42, 1, 57);
+}
+
+.form-check-label{
+    font-weight: 700;
+}
+
+.gender{
+    border: 1px solid ;
+    border-radius: 5px;
+    box-shadow:-1px 3px 15px rgb(42, 1, 57) ;
+}
+
+.payment{
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow:-1px 3px 15px rgb(42, 1, 57) ;
+}
+
+.form-select{
+    background-color:rgb(183, 152, 192,0.4) ;
+}
+
+
+
+
